@@ -8,6 +8,15 @@ export const Container = styled.div `
   background-color: #66CDAA;
   width: 100%;
   height: 3rem;
+  @media (max-width: 920px) {
+    padding: 1rem 3rem;
+  }
+  @media (max-width: 650px) {
+    padding: 1rem 1.5rem;
+  }
+  @media (max-width: 550px) {
+    /*criarhamburguer*/ 
+  }
 `
 ;
 
