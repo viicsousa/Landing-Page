@@ -14,7 +14,7 @@ import GameControllers from "../../assets/animations/game-controller.json";
 export default function NavBar ( ) {
 
   const router = useRouter();
-  const [getHamburger, setHamburger] = useState(true);
+  const [getHamburger, setHamburger] = useState(false);
 
   const openHamburger = useCallback(() => {
     setHamburger(true);
