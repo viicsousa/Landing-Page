@@ -70,7 +70,7 @@ export default function About() {
             </Information>
             <Information>
               <Label htmlFor="nickname">Nickname:</Label>
-              <Input id="nickname" placeholder="Digite seu nickname" type="text"></Input>
+              <Input id="nickname" placeholder="Digite seu nickname" ></Input>
             </Information>
             <Information>
               <Label htmlFor="email">Email:</Label>

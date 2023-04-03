@@ -108,9 +108,23 @@ export const Information =styled.div`
   flex-direction: column;
 `;
 export const Label = styled.label``;
-export const Input = styled.input``;
+export const Input = styled.input`
+  .hover {
+    color: red;
+    }
+  :focus{
+    outline: none;
+    }
+`;
 
-export const Select = styled.select``;
+export const Select = styled.select`
+  .hover {
+    color: red;
+  }
+  :focus{
+    outline: none;
+  }
+`;
 
 export const CoachI = styled.option``;
 
