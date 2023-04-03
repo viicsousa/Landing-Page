@@ -1,5 +1,3 @@
-import { useState, useRef } from "react";
-
 import Image from "next/image";
 
 import {
@@ -28,35 +26,11 @@ import {
 
 import TFTbackground from "../../assets/img/png/tftback.png";
 
-import {Warning} from "../../function/ToastWarning/index";
-import Email from "../../validations/Email/index";
 
 export default function About() {
-  const nameInputRef = useRef<HTMLInputElement>(null);
-  const emailInputRef = useRef<HTMLInputElement>(null);
 
-  const [getStep, setStep] = useState(0);
-  const [getName, setName ] = useState<string>("");
-  const [getEmail, setEmail ] = useState<string>("");
-  function validateName(){
-    if(nameInputRef.current!.value === ""){
-      Warning("Preencha o nome", 2500)
-    } else {
-      setName(nameInputRef.current!.value);
-      setStep((currPage) => currPage + 1);
-    }
-  }
-
-  function validateEmail(){
-    if(emailInputRef.current!.value === ""){
-      Warning("Preencha o email", 2500)
-    } else if(Email.TextoValido(emailInputRef.current!.value) === false){
-      Warning("Email inválido", 2500)
-    } else {
-      setStep((currPage) => currPage + 1);
-      setEmail(emailInputRef.current!.value);
-    }
-  }
+  
+  
   return (
     <Structure>
       <Container>
@@ -95,7 +69,7 @@ export default function About() {
             <Title>Formulário</Title>
             <Information>
               <Label htmlFor="name">Nome:</Label>
-              <Input ref={nameInputRef} id="name" placeholder="Digite seu nome" type="text"></Input>
+              <Input  id="name" placeholder="Digite seu nome" type="text" ></Input>
             </Information>
             <Information>
               <Label htmlFor="nickname">Nickname:</Label>
@@ -103,7 +77,7 @@ export default function About() {
             </Information>
             <Information>
               <Label htmlFor="email">Email:</Label>
-              <Input ref={emailInputRef} id="email" placeholder="Digite seu email" type="email"></Input>
+              <Input  id="email" placeholder="Digite seu email" type="email"></Input>
             </Information>
             <Information>
               <Label htmlFor="discord">Discord:</Label>
