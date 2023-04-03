@@ -46,6 +46,7 @@ export const TextAbout = styled.div`
   font-size: 14px;
   font-weight: 600;
   border: 7px double #34495C;
+  border-radius:8px;
   padding: 1rem;
   background: #66CDAA;
 `;
@@ -63,7 +64,7 @@ export const Coachs = styled.div`
   color: #34495C;
   font-size: 14px;
   border: 7px double #34495C;
-  border-radius:30px;
+  border-radius:8px;
   padding: 0.5rem;
   background: #66CDAA;
 `;
@@ -112,25 +113,37 @@ export const Input = styled.input`
   .hover {
     color: red;
     }
-  :focus{
+  ::focus{
     outline: none;
     }
+    ::placeholder {
+      font-size: 14px;
+  }
 `;
 
 export const Select = styled.select`
+font-size: 14px;
   .hover {
     color: red;
   }
   :focus{
     outline: none;
   }
+
+  
 `;
 
-export const CoachI = styled.option``;
+export const CoachI = styled.option`
+  font-size: 14px;
+`;
 
-export const CoachII = styled.option``;
+export const CoachII = styled.option`
+  font-size: 14px;
+`;
 
-export const CoachIII = styled.option``;
+export const CoachIII = styled.option`
+  font-size: 14px;
+`;
 
 export const Button = styled.button`
   background-color: #66CDAA;
