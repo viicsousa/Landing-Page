@@ -8,19 +8,20 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 2rem 1rem;
-  height: 30rem;
+  height: 35rem;
+  background-color: rgba(0, 0, 0, 0.4);
   
   #imgpingu {
     height: 15rem;
     width: 15rem;
   }
   #imgback {
-    opacity: 0.6;
+    opacity: 0.5;
     z-index: -1;
     position: absolute;
     justify-content: center;
     width: 100%;
-    height: 40rem;
+    height: 35rem;
   }`;
 export const ContainerAbout = styled.div`
   display: flex;
@@ -32,9 +33,8 @@ export const ContainerAbout = styled.div`
 
 export const TitleContainer = styled.div`
   font-weight:900;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #000;
-  padding-top: 2rem;
+  -webkit-text-stroke-width: 1.7px;
+  -webkit-text-stroke-color: #34495C;
   font-size: 3.5em; 
   color: #66CDAA;
 `;
@@ -83,7 +83,7 @@ export const Value = styled.div`
 `;
 
 
-export const Form = styled.form`
+export const Form = styled.div`
   background: #FFFFFF;
   display: flex;
   flex-direction: column;
