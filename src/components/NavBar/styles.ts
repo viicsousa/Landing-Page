@@ -8,7 +8,7 @@ export const Container = styled.div `
   align-items: center;
   background-color: #66CDAA;
   width: 100%;
-  height: 3rem;
+  height: 2rem;
   @media (max-width: 920px) {
     padding: 1rem 3rem;
   }
@@ -28,7 +28,7 @@ export const Logo = styled.div`
 
 export const TitleLogo = styled.text`
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   color: #34495C;
 `;
 
@@ -58,31 +58,3 @@ export const NavRouters = styled.text`
   }
 `;
 
-export const ModalHamburger = styled.div`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #66CDAA;
-  padding: 1rem; 
-  width: 8rem;
-  top: 3rem;
-  right: 0;
-`;
-
-export const ContainerHamburger = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-`;
-
-export const NavHamburger = styled.div`
-  color: #34495C;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
-  :hover {
-    opacity: 0.6;
-  }
-`;

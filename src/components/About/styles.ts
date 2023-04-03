@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const Structure = styled.div`
   position: relative;
 `;
-
-export const ContainerAbout = styled.div`
+export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -22,7 +21,22 @@ export const ContainerAbout = styled.div`
     justify-content: center;
     width: 100%;
     height: 40rem;
-  }
+  }`;
+export const ContainerAbout = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+`;
+
+export const TitleContainer = styled.div`
+  font-weight:900;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+  padding-top: 2rem;
+  font-size: 3.5em; 
+  color: #66CDAA;
 `;
 
 export const TextAbout = styled.div`
@@ -31,7 +45,84 @@ export const TextAbout = styled.div`
   color: #34495C;
   font-size: 14px;
   font-weight: 600;
-  border: 10px groove #34495C;
+  border: 7px double #34495C;
   padding: 1rem;
   background: #66CDAA;
+`;
+
+export const TypeCoach = styled.div`
+  display: flex;
+  gap: 1rem;
+`;
+
+export const Coachs = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 15rem;
+  color: #34495C;
+  font-size: 14px;
+  border: 7px double #34495C;
+  border-radius:30px;
+  padding: 0.5rem;
+  background: #66CDAA;
+`;
+
+export const TitleCoach = styled.div`
+  font-weight: 600;
+  text-align: center;
+`;
+
+export const TextCoach = styled.div`
+  text-align: justify;
+`;
+
+export const Value = styled.div`
+  font-weight: 600;
+  text-align: center;
+`;
+
+
+export const Form = styled.form`
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  padding: 1rem;
+  border-radius: 8px; 
+`;
+export const ContainerForm = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+`;
+
+export const Title = styled.form`
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #34495C;
+`;
+export const Information =styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+export const Label = styled.label``;
+export const Input = styled.input``;
+
+export const Select = styled.select``;
+
+export const CoachI = styled.option``;
+
+export const CoachII = styled.option``;
+
+export const CoachIII = styled.option``;
+
+export const Button = styled.button`
+  background-color: #66CDAA;
+  border: none;
+  color: #34495C;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.2rem;
 `;
