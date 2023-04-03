@@ -34,7 +34,7 @@ export default function About() {
   return (
     <Structure>
       <Container>
-        <Image src={TFTbackground} alt="" id="imgback" />
+        
         <ContainerAbout>
         <TitleContainer>Coachs TFT</TitleContainer>
           <TextAbout>
