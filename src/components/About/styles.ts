@@ -2,33 +2,36 @@ import styled from "styled-components";
 
 export const Structure = styled.div`
   position: relative;
-`;
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 2rem 1rem;
-  height: 35rem;
   background-color: rgba(0, 0, 0, 0.4);
-  
-  #imgpingu {
-    height: 15rem;
-    width: 15rem;
-  }
+  heigth: 100%;
   #imgback {
     opacity: 0.5;
     z-index: -1;
     position: absolute;
-    justify-content: center;
     width: 100%;
-    height: 35rem;
-  }`;
+    min-height: 100%;
+  };
+
+`;
+export const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4rem 1rem;
+  @media (max-width: 500px) {
+    padding: 2rem 1rem;
+  }
+  `;
+  
 export const ContainerAbout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-
+  @media (max-width: 1103px) {
+    padding-botton: 7rem;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -37,6 +40,9 @@ export const TitleContainer = styled.div`
   -webkit-text-stroke-color: #34495C;
   font-size: 3.5em; 
   color: #66CDAA;
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  }
 `;
 
 export const TextAbout = styled.div`
@@ -49,15 +55,27 @@ export const TextAbout = styled.div`
   border-radius:8px;
   padding: 1rem;
   background: #66CDAA;
+  @media (max-width: 500px) {
+    width: 18rem;
+    font-size: 13px;
+  }
 `;
 
 export const TypeCoach = styled.div`
   display: flex;
+  flew-wrap: wrap;
+  width: 100%;
   gap: 1rem;
+  @media (max-width: 775px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  
 `;
 
 export const Coachs = styled.div`
   display: flex;
+  flew-wrap: wrap;
   flex-direction: column;
   justify-content: space-around;
   width: 15rem;
@@ -67,6 +85,10 @@ export const Coachs = styled.div`
   border-radius:8px;
   padding: 0.5rem;
   background: #66CDAA;
+  @media (max-width: 500px) {
+    width: 12rem;
+    font-size: 12px;
+  };
 `;
 
 export const TitleCoach = styled.div`
@@ -91,6 +113,7 @@ export const Form = styled.div`
   width: 20rem;
   padding: 1rem;
   border-radius: 8px; 
+  margin-top: 3rem;
 `;
 export const ContainerForm = styled.div`
   display: flex;
