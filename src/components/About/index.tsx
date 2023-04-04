@@ -24,7 +24,7 @@ import {
   CoachIII,
   Button,
   Alert
-} from "./styles";
+} from "./NavBar.styles";
 
 import ImgAlert from "../../assets/img/svg/alert.svg";
 
