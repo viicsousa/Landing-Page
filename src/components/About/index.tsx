@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import {
@@ -22,13 +23,43 @@ import {
   CoachII,
   CoachIII,
   Button,
+  Alert
 } from "./styles";
 
-import TFTbackground from "../../assets/img/png/tftback.png";
+import ImgAlert from "../../assets/img/svg/alert.svg";
 
 
 export default function About() {
+  const [nome, setNome] = useState('');
+  const [nickname, setNickname] = useState('');
+  const [email, setEmail] = useState('');
+  const [ discord, Setdiscord] = useState('');
+  const [msg, setMsg] = useState('');
 
+  async function handlemsg () {
+    
+  }
+  const validaForm = () => {
+    if (nome === '') {
+      setMsg('Preencha o nome!')
+      return false
+    }
+    if (nickname === '') {
+      setMsg('Preencha o nickname!')
+      return false
+    }
+    if (email === '') {
+      setMsg('Preencha o email!')
+      return false
+    }
+    if (discord === '') {
+      setMsg('Preencha o discord!')
+      return false
+    }
+    setMsg('')
+    // AQUI iriamos chamar a API para receber os dados do formulário
+    return 
+  }
   
   
   return (
@@ -69,19 +100,21 @@ export default function About() {
             <Title>Formulário</Title>
             <Information>
               <Label htmlFor="name">Nome:</Label>
-              <Input  id="name" placeholder="Digite seu nome" type="text" ></Input>
+              <Input  id="name" placeholder="Digite seu nome" type="text" onChange={(e) => {
+              setNome(e.target.value)
+            }} ></Input>
             </Information>
             <Information>
               <Label htmlFor="nickname">Nickname:</Label>
-              <Input  id="nickname" placeholder="Digite seu nickname" ></Input>
+              <Input  id="nickname" placeholder="Digite seu nickname" onChange ={(e) => setNickname(e.target.value)}></Input>
             </Information>
             <Information>
               <Label htmlFor="email">Email:</Label>
-              <Input  id="email" placeholder="Digite seu email" type="email"></Input>
+              <Input  id="email" placeholder="Digite seu email" type="email" onChange={(e) =>  setEmail(e.target.value)}></Input>
             </Information>
             <Information>
               <Label htmlFor="discord">Discord:</Label>
-              <Input id="nickname" placeholder="Digite seu discord" type="text"></Input>
+              <Input id="discord" placeholder="Digite seu discord" type="text" onChange={(e) => Setdiscord(e.target.value)}></Input>
             </Information>
             <Information>
               <Label htmlFor="coach" >Escolha o Coach:</Label>
@@ -91,10 +124,20 @@ export default function About() {
                 <CoachIII>CoachIII</CoachIII>
               </Select>
             </Information>
-            <Button>Enviar formulário</Button>
+            <Button onClick={validaForm}>Enviar formulário</Button>
           </ContainerForm>
         </Form>
+        
+        {msg !== '' && 
+            <Alert>
+              <Image src={ImgAlert} alt="" height={20} id="imgalert"/>{msg}
+            </Alert>
+          }
+        {msg === 'Enviar formulário' &&
+          <Alert> </Alert>
+        }
       </Container>
+      
     </Structure>
   );
 }

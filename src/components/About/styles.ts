@@ -177,3 +177,29 @@ export const Button = styled.button`
   border-radius: 8px;
   padding: 0.2rem;
 `;
+
+export const Alert = styled.div`
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+  right: 15px;
+  padding: 1rem;
+  background: #FFFFFF;
+  color: red;
+  animation-duration: 0.2s;
+  animation-name: slidein;
+  gap: 0.5rem;
+  transform: translateX(0);
+  border: 2px solid red;
+
+  @keyframes slidein {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 10rem;
+    }
+    
+  }
+`;
