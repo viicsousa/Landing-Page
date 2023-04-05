@@ -153,6 +153,7 @@ export const Input = styled.input`
 export const Select = styled.select`
 font-size: 14px;
 background: #FFFFFF;
+color: #34495C;
   .hover {
     color: red;
   }
@@ -166,6 +167,7 @@ background: #FFFFFF;
 export const CoachI = styled.option`
   font-size: 14px;
   background: #FFFFFF;
+  color: #34495C;
 `;
 
 export const CoachII = styled.option`
