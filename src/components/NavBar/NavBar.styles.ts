@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div `
+export const Container = styled.div`
   display: flex;
   position: relative;
   justify-content: space-between;
   padding: 1rem 5rem;
   align-items: center;
-  background-color: #66CDAA;
+  background-color: #66cdaa;
   width: 100%;
   height: 2rem;
   @media (max-width: 920px) {
@@ -18,8 +18,7 @@ export const Container = styled.div `
   @media (max-width: 550px) {
     padding: 1rem 0.7rem;
   }
-`
-;
+`;
 
 export const Logo = styled.div`
   display: flex;
@@ -29,24 +28,24 @@ export const Logo = styled.div`
 export const TitleLogo = styled.text`
   font-weight: bold;
   font-size: 14px;
-  color: #34495C;
+  color: #34495c;
 `;
 
 export const Nav = styled.div`
   display: flex;
   align-items: center;
   gap: 3rem;
-  div{
+  div {
     cursor: pointer;
     display: none;
-    @media (max-width:550px) {
+    @media (max-width: 550px) {
       display: flex;
     }
   }
 `;
 
 export const NavRouters = styled.text`
-  color: #34495C;
+  color: #34495c;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -57,4 +56,3 @@ export const NavRouters = styled.text`
     opacity: 0.6;
   }
 `;
-
