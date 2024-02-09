@@ -7,14 +7,16 @@ import { Container, Logo, TitleLogo, Nav, NavRouters } from "./NavBar.styles";
 
 import Hamburguer from "../../assets/img/svg/hamburguer.svg";
 import Close from "../../assets/img/svg/close.svg";
-
+import tft from "../../assets/img/png/tft-remix-rumble-key-art-1920x1080.webp"
+import tftII from "../../assets/img/png/tft_set_10_novidades__s7lzn0.webp"
 import GameControllers from "../../assets/animations/game-controller.json";
 
 export default function NavBar() {
   return (
     <Container>
       <Logo>
-        <TitleLogo>TFTeacher</TitleLogo>
+        <Image src={tft} alt="" />
+  
       </Logo>
     </Container>
   );

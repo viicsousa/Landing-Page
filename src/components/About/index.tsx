@@ -34,6 +34,19 @@ export default function About() {
   const [email, setEmail] = useState("");
   const [discord, Setdiscord] = useState("");
   const [msg, setMsg] = useState("");
+  const [expandedCoachI, setExpandedCoachI] = useState(false);
+  const [expandedCoachII, setExpandedCoachII] = useState(false);
+  const [expandedCoachIII, setExpandedCoachIII] = useState(false);
+
+  const handleCoachExpand = (coachType: string) => {
+    if (coachType === "I") {
+      setExpandedCoachI(!expandedCoachI);
+    } else if (coachType === "II") {
+      setExpandedCoachII(!expandedCoachII);
+    } else if (coachType === "III") {
+      setExpandedCoachIII(!expandedCoachIII);
+    }
+  };
 
   async function handlemsg() {}
   const validaForm = () => {
@@ -71,25 +84,22 @@ export default function About() {
             pouco do conhecimento que adquiri durante esse tempo.
           </TextAbout>
           <TypeCoach>
-            <Coachs>
-              <TitleCoach>Coach I:</TitleCoach>
-              <TextCoach>
-                Explico sobre o early, mid e late game do jogo. Atualizo do
-                meta.
-              </TextCoach>
-              <Value>R$ 50,00</Value>
-            </Coachs>
-            <Coachs>
-              <TitleCoach> Coach II:</TitleCoach>
-              <TextCoach>Analiso dois jogos ao vivo ou gravados.</TextCoach>
-              <Value>R$ 50,00</Value>
-            </Coachs>
-            <Coachs>
-              <TitleCoach>Coach III:</TitleCoach>
-              <TextCoach>Combo do Coach I e Coach II.</TextCoach>
-              <Value>R$ 90,00</Value>
-            </Coachs>
-          </TypeCoach>
+        <Coachs>
+          <TitleCoach onClick={() => handleCoachExpand("I")}>Coach I{expandedCoachI ? "-" : "+"}</TitleCoach>
+          {expandedCoachI && <TextCoach>Explico sobre o early, mid e late game do jogo. Atualizo do meta. <Value>R$ 50,00</Value></TextCoach>}
+          
+        </Coachs>
+        <Coachs>
+          <TitleCoach onClick={() => handleCoachExpand("II")}>Coach II{expandedCoachII ? "-" : "+"}</TitleCoach>
+          {expandedCoachII && <TextCoach>Analiso dois jogos ao vivo ou gravados. <Value>R$ 50,00</Value></TextCoach>}
+          
+        </Coachs>
+        <Coachs>
+          <TitleCoach onClick={() => handleCoachExpand("III")}>Coach III{expandedCoachIII ? "-" : "+"}</TitleCoach>
+          {expandedCoachIII && <TextCoach>Combo do Coach I e Coach II.  <Value>R$ 90,00</Value></TextCoach>}
+         
+        </Coachs>
+      </TypeCoach>
         </ContainerAbout>
         <Form>
           <ContainerForm>

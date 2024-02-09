@@ -2,13 +2,8 @@ import styled from "styled-components";
 
 export const Structure = styled.div`
   position: relative;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(52, 73, 80, 1) 37%,
-    rgba(14, 173, 207, 1) 80%
-  );
+  
+  
   min-height: 110vh;
   #imgback {
     opacity: 0.5;
