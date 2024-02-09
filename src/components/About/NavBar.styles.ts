@@ -62,9 +62,9 @@ export const TypeCoach = styled.div`
 
 export const Coachs = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   color: #684e92;
-  font-size: 18px;
+ 
   font-weight: 600;
  
   @media (max-width: 500px) {
@@ -76,10 +76,14 @@ export const Coachs = styled.div`
 export const TitleCoach = styled.div`
   font-weight: 600;
   text-align: center;
+  font-size: 18px;
 `;
 
 export const TextCoach = styled.div`
   text-align: justify;
+  flex-direction: row;
+  font-size: 16px;
+  padding: 0 3rem; 
 `;
 
 export const Value = styled.div`
