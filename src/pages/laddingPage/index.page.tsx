@@ -1,10 +1,13 @@
 import NavBar from "../../components/NavBar/index";
 import About from "../../components/About/index";
+import { Container } from "./laddingPage.styles"
 export default function LaddingPage() {
   return (
     <>
-      <NavBar />
+     <Container>
+     <NavBar />
       <About />
+     </Container>
     </>
   );
 }

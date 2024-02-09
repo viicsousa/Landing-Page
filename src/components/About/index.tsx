@@ -85,17 +85,17 @@ export default function About() {
           </TextAbout>
           <TypeCoach>
         <Coachs>
-          <TitleCoach onClick={() => handleCoachExpand("I")}>Coach I{expandedCoachI ? "-" : "+"}</TitleCoach>
+          <TitleCoach onClick={() => handleCoachExpand("I")}>Coach I   {expandedCoachI ? "-" : "+"}</TitleCoach>
           {expandedCoachI && <TextCoach>Explico sobre o early, mid e late game do jogo. Atualizo do meta. <Value>R$ 50,00</Value></TextCoach>}
           
         </Coachs>
         <Coachs>
-          <TitleCoach onClick={() => handleCoachExpand("II")}>Coach II{expandedCoachII ? "-" : "+"}</TitleCoach>
+          <TitleCoach onClick={() => handleCoachExpand("II")}>Coach II   {expandedCoachII ? "-" : "+"}</TitleCoach>
           {expandedCoachII && <TextCoach>Analiso dois jogos ao vivo ou gravados. <Value>R$ 50,00</Value></TextCoach>}
           
         </Coachs>
         <Coachs>
-          <TitleCoach onClick={() => handleCoachExpand("III")}>Coach III{expandedCoachIII ? "-" : "+"}</TitleCoach>
+          <TitleCoach onClick={() => handleCoachExpand("III")}>Coach III   {expandedCoachIII ? "-" : "+"}</TitleCoach>
           {expandedCoachIII && <TextCoach>Combo do Coach I e Coach II.  <Value>R$ 90,00</Value></TextCoach>}
          
         </Coachs>

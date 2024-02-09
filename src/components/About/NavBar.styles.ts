@@ -1,24 +1,12 @@
 import styled from "styled-components";
 
 export const Structure = styled.div`
-  position: relative;
   
   
-  min-height: 110vh;
-  #imgback {
-    opacity: 0.5;
-    z-index: -1;
-    position: absolute;
-    width: 100%;
-    min-height: 100%;
-  }
 `;
 export const Container = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-around;
-  padding: 4rem 1rem;
   @media (max-width: 500px) {
     padding: 2rem 1rem;
   }
@@ -27,6 +15,7 @@ export const Container = styled.div`
 export const ContainerAbout = styled.div`
   display: flex;
   flex-direction: column;
+
   align-items: center;
   gap: 2rem;
   @media (max-width: 1103px) {
@@ -36,10 +25,9 @@ export const ContainerAbout = styled.div`
 
 export const TitleContainer = styled.div`
   font-weight: 900;
-  -webkit-text-stroke-width: 1.7px;
-  -webkit-text-stroke-color: #34495c;
+  
   font-size: 3.5em;
-  color: #66cdaa;
+
   @media (max-width: 500px) {
     font-size: 3rem;
   }
@@ -48,13 +36,11 @@ export const TitleContainer = styled.div`
 export const TextAbout = styled.div`
   text-align: justify;
   width: 30rem;
-  color: #34495c;
-  font-size: 14px;
-  font-weight: 600;
-  border: 7px double #34495c;
+  font-size: 18px;
+  font-weight: 700;
   border-radius: 8px;
   padding: 1rem;
-  background: #66cdaa;
+
   @media (max-width: 500px) {
     width: 18rem;
     font-size: 13px;
@@ -64,7 +50,9 @@ export const TextAbout = styled.div`
 export const TypeCoach = styled.div`
   display: flex;
   flew-wrap: wrap;
-  width: 100%;
+  flex-direction: column;
+  align-self: flex-start;
+  margin: 0rem 1rem;
   gap: 1rem;
   @media (max-width: 775px) {
     flex-direction: column;
@@ -74,17 +62,11 @@ export const TypeCoach = styled.div`
 
 export const Coachs = styled.div`
   display: flex;
-  flew-wrap: wrap;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  width: 15rem;
-  color: #34495c;
-  font-size: 14px;
-  border: 7px double #34495c;
-  border-radius: 8px;
-  padding: 0.5rem;
-  background: #66cdaa;
+  color: #684e92;
+  font-size: 18px;
+  font-weight: 600;
+ 
   @media (max-width: 500px) {
     width: 12rem;
     font-size: 12px;
@@ -106,7 +88,7 @@ export const Value = styled.div`
 `;
 
 export const Form = styled.div`
-  background: #ffffff;
+  background: #684e92;
   display: flex;
   flex-direction: column;
   width: 20rem;
@@ -122,19 +104,22 @@ export const ContainerForm = styled.div`
 
 export const Title = styled.form`
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
-  color: #34495c;
+  color: #000000;
 `;
 export const Information = styled.div`
   display: flex;
   flex-direction: column;
 `;
 export const Label = styled.label`
-  color: #34495c;
+  color: #000000;
+  font-size: 18px;
+
 `;
 export const Input = styled.input`
   background: #ffffff;
+  border: none;
   .hover {
     color: red;
   }
@@ -142,6 +127,7 @@ export const Input = styled.input`
     outline: none;
   }
   ::placeholder {
+    padding: 1.5rem 0 ;
     font-size: 14px;
     color: #cdcdcd;
   }
@@ -150,7 +136,7 @@ export const Input = styled.input`
 export const Select = styled.select`
   font-size: 14px;
   background: #ffffff;
-  color: #34495c;
+  border: none;
   .hover {
     color: red;
   }
@@ -175,9 +161,9 @@ export const CoachIII = styled.option`
 `;
 
 export const Button = styled.button`
-  background-color: #66cdaa;
+  background-color: #000000;
   border: none;
-  color: #34495c;
+  color: #684e92;
   font-weight: 600;
   border-radius: 8px;
   padding: 0.2rem;
