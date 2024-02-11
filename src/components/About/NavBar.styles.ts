@@ -6,7 +6,8 @@ export const Structure = styled.div`
 `;
 export const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 2rem;
   @media (max-width: 500px) {
     padding: 2rem 1rem;
   }
@@ -15,7 +16,6 @@ export const Container = styled.div`
 export const ContainerAbout = styled.div`
   display: flex;
   flex-direction: column;
-
   align-items: center;
   gap: 2rem;
   @media (max-width: 1103px) {
@@ -25,9 +25,7 @@ export const ContainerAbout = styled.div`
 
 export const TitleContainer = styled.div`
   font-weight: 900;
-  
   font-size: 3.5em;
-
   @media (max-width: 500px) {
     font-size: 3rem;
   }
@@ -40,7 +38,6 @@ export const TextAbout = styled.div`
   font-weight: 700;
   border-radius: 8px;
   padding: 1rem;
-
   @media (max-width: 500px) {
     width: 18rem;
     font-size: 13px;
@@ -76,7 +73,7 @@ export const Coachs = styled.div`
 export const TitleCoach = styled.div`
   font-weight: 600;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
 `;
 
 export const TextCoach = styled.div`
