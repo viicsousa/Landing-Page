@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import React from 'react'
+import Select from 'react-select';
 
 import {
   Structure,
@@ -17,7 +19,6 @@ import {
   Title,
   Information,
   Label,
-  Select,
   Input,
   CoachI,
   CoachII,
@@ -27,6 +28,8 @@ import {
 } from "./NavBar.styles";
 
 import ImgAlert from "../../assets/img/svg/alert.svg";
+
+import * as Toast from "../../function/ToastWarning/index";
 
 export default function About() {
   const [nome, setNome] = useState("");
@@ -48,28 +51,31 @@ export default function About() {
     }
   };
 
-  async function handlemsg() {}
-  const validaForm = () => {
+  async function ValidateInputs() {
     if (nome === "") {
-      setMsg("Preencha o nome!");
+      Toast.Warning("Preencha o Nome", 2500);
+      return false;
+    } else if (nickname === "") {
+      Toast.Warning("Preencha o Nickname", 2500);
+      return false;
+    } else if (email === "") {
+      Toast.Warning("Preencha o Email", 2500);
+      return false;
+    } else if (discord === "") {
+      Toast.Warning("Preencha o Discord", 2500);
       return false;
     }
-    if (nickname === "") {
-      setMsg("Preencha o nickname!");
-      return false;
-    }
-    if (email === "") {
-      setMsg("Preencha o email!");
-      return false;
-    }
-    if (discord === "") {
-      setMsg("Preencha o discord!");
-      return false;
-    }
-    setMsg("");
-    // AQUI iriamos chamar a API para receber os dados do formulário
-    return;
-  };
+    
+  }
+
+
+  const options = [
+    { value: 'coachi', label: 'Coach I' },
+    { value: 'coachii', label: 'Coach II' },
+    { value: 'coachiii', label: 'Coach III' }
+  ]
+ 
+
 
   return (
     <Structure>
@@ -143,13 +149,9 @@ export default function About() {
             </Information>
             <Information>
               <Label htmlFor="coach">Escolha o Coach:</Label>
-              <Select id="coach">
-                <CoachI> Coach I</CoachI>
-                <CoachII>Coach II</CoachII>
-                <CoachIII>CoachIII</CoachIII>
-              </Select>
+              <Select options={options} />
             </Information>
-            <Button onClick={validaForm}>Enviar formulário</Button>
+            <Button onClick={ValidateInputs}>Enviar formulário</Button>
           </ContainerForm>
         </Form>
 

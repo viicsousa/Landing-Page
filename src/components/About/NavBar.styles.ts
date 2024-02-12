@@ -6,8 +6,8 @@ export const Structure = styled.div`
 `;
 export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 0 2rem;
+  justify-content: space-around;
+  padding: 1rem 5rem;
   @media (max-width: 500px) {
     padding: 2rem 1rem;
   }
@@ -17,7 +17,8 @@ export const ContainerAbout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+  width: 30rem;
   @media (max-width: 1103px) {
     padding-botton: 7rem;
   }
@@ -48,7 +49,7 @@ export const TypeCoach = styled.div`
   display: flex;
   flew-wrap: wrap;
   flex-direction: column;
-  align-self: flex-start;
+  align-self: center;
   margin: 0rem 1rem;
   gap: 1rem;
   @media (max-width: 775px) {
@@ -59,11 +60,9 @@ export const TypeCoach = styled.div`
 
 export const Coachs = styled.div`
   display: flex;
-  flex-direction: row;
-  color: #684e92;
- 
+  flex-direction: column;
+  
   font-weight: 600;
- 
   @media (max-width: 500px) {
     width: 12rem;
     font-size: 12px;
@@ -74,13 +73,16 @@ export const TitleCoach = styled.div`
   font-weight: 600;
   text-align: center;
   font-size: 22px;
+  color: #684e92;
 `;
 
 export const TextCoach = styled.div`
-  text-align: justify;
+  text-align: center;
   flex-direction: row;
-  font-size: 16px;
-  padding: 0 3rem; 
+  color: #000000
+  font-size: 14px;
+  wight: 20rem;
+  padding: 0.5rem 1rem; 
 `;
 
 export const Value = styled.div`
@@ -93,6 +95,7 @@ export const Form = styled.div`
   display: flex;
   flex-direction: column;
   width: 20rem;
+  height: 30rem;
   padding: 1rem;
   border-radius: 8px;
   margin-top: 3rem;
