@@ -65,8 +65,10 @@ export default function About() {
       Toast.Warning("Preencha o Discord", 2500);
       return false;
     }
-    
+  
+    return true;
   }
+  
 
 
   const options = [
@@ -151,17 +153,17 @@ export default function About() {
               <Label htmlFor="coach">Escolha o Coach:</Label>
               <Select options={options} />
             </Information>
-            <Button onClick={ValidateInputs}>Enviar formulário</Button>
+            
+        <Button onClick={async () => {
+  const isValid = await ValidateInputs();
+  if (isValid) {
+    // Lógica para enviar o formulário
+    console.log("Formulário válido. Enviar dados.");
+  }
+}}>Enviar formulário</Button>
           </ContainerForm>
         </Form>
 
-        {msg !== "" && (
-          <Alert>
-            <Image src={ImgAlert} alt="" height={20} id="imgalert" />
-            {msg}
-          </Alert>
-        )}
-        {msg === "Enviar formulário" && <Alert> </Alert>}
       </Container>
     </Structure>
   );

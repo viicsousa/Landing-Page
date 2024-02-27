@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Structure = styled.div`
-  
+background: #e2daf2;
   
 `;
 export const Container = styled.div`

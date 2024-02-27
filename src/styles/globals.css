@@ -4,6 +4,7 @@
 
 html,
 body {
+  background: #e2daf2;
   user-select: none;
   -webkit-user-drag: none;
   padding: 0;
@@ -26,7 +27,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: red;
-    background: red;
+    background: #e2daf2;
+   
   }
 }
