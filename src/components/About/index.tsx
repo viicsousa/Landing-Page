@@ -20,14 +20,12 @@ import {
   Information,
   Label,
   Input,
-  CoachI,
-  CoachII,
-  CoachIII,
+
   Button,
-  Alert,
+ 
 } from "./NavBar.styles";
 
-import ImgAlert from "../../assets/img/svg/alert.svg";
+
 
 import * as Toast from "../../function/ToastWarning/index";
 
@@ -36,7 +34,6 @@ export default function About() {
   const [nickname, setNickname] = useState("");
   const [email, setEmail] = useState("");
   const [discord, Setdiscord] = useState("");
-  const [msg, setMsg] = useState("");
   const [expandedCoachI, setExpandedCoachI] = useState(false);
   const [expandedCoachII, setExpandedCoachII] = useState(false);
   const [expandedCoachIII, setExpandedCoachIII] = useState(false);
@@ -70,13 +67,12 @@ export default function About() {
   }
   
 
-
   const options = [
     { value: 'coachi', label: 'Coach I' },
     { value: 'coachii', label: 'Coach II' },
     { value: 'coachiii', label: 'Coach III' }
   ]
- 
+  
 
 
   return (

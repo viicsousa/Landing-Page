@@ -39,7 +39,7 @@ export const TextAbout = styled.div`
   font-weight: 700;
   border-radius: 8px;
   padding: 1rem;
-  @media (max-width: 500px) {
+  @media (max-width: 600px) {
     width: 18rem;
     font-size: 13px;
   }
@@ -110,15 +110,19 @@ export const Title = styled.form`
   text-align: center;
   font-size: 28px;
   font-weight: 600;
-  color: #000000;
+  color: #ffffff;
 `;
 export const Information = styled.div`
   display: flex;
   flex-direction: column;
+  #Select {
+    color: red;
+  }
 `;
 export const Label = styled.label`
-  color: #000000;
+  color: #ffffff;
   font-size: 18px;
+  font-weight: 600;
 
 `;
 export const Input = styled.input`
@@ -137,39 +141,16 @@ export const Input = styled.input`
   }
 `;
 
-export const Select = styled.select`
-  font-size: 14px;
-  background: #ffffff;
-  border: none;
-  .hover {
-    color: red;
-  }
-  :focus {
-    outline: none;
-  }
-`;
 
-export const CoachI = styled.option`
-  font-size: 14px;
-  color: #34495c;
-`;
 
-export const CoachII = styled.option`
-  font-size: 14px;
-  color: #34495c;
-`;
-
-export const CoachIII = styled.option`
-  font-size: 14px;
-  color: #34495c;
-`;
 
 export const Button = styled.button`
-  background-color: #000000;
+  background-color: #ffffff;
   border: none;
   color: #684e92;
   font-weight: 600;
   border-radius: 8px;
+  margin-top: 1rem;
   padding: 0.2rem;
 `;
 
